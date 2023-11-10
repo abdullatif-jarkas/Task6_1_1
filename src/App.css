@@ -1,11 +1,6 @@
 * {
   font-size: 1.1rem;
 }
-body {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
 .App {
   position: absolute;
   left: 50%;
@@ -43,15 +38,6 @@ input[type="text"] {
 }
 #backspace {
   color: #262834;
-}
-button {
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #262834;
-  color: #fff;
-  font-weight: bold;
 }
 input:focus, 
 input:active,

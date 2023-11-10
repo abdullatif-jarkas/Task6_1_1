@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react'
 import './App.css'
+import Button from './components/Button/Button';
 
 
 const App = () => {
@@ -27,24 +28,26 @@ const App = () => {
         <input type="text" value={result} />
       </form>
       <div className="keypad">
-        <button className='highlight' onClick={clear} id='clear'>Clear</button>
-        <button className='highlight' onClick={backspace} id='backspace'>C</button>
-        <button name='/' onClick={handleClick}>&divide;</button>
-        <button name='7' onClick={handleClick}>7</button>
-        <button name='8' onClick={handleClick}>8</button>
-        <button name='9' onClick={handleClick}>9</button>
-        <button name='*' onClick={handleClick}>&times;</button>
-        <button name='4' onClick={handleClick}>4</button>
-        <button name='5' onClick={handleClick}>5</button>
-        <button name='6' onClick={handleClick}>6</button>
-        <button name='-' onClick={handleClick}>&ndash;</button>
-        <button name='1' onClick={handleClick}>1</button>
-        <button name='2' onClick={handleClick}>2</button>
-        <button name='3' onClick={handleClick}>3</button>
-        <button name='+' onClick={handleClick}>+</button>
-        <button name='0' onClick={handleClick}>0</button>
-        <button name='.' onClick={handleClick}>.</button>
-        <button className='highlight' onClick={calculate} id='result'>=</button>
+        <Button func={clear} text='Clear' className={true} id="clear"/>
+        <Button func={backspace} text='C' className={true} id="backspace"/>
+
+        <Button name='/' func={handleClick} text='&divide;'/>
+        <Button name='7' func={handleClick} text='7'/>
+        <Button name='8' func={handleClick} text='8'/>
+        <Button name='9' func={handleClick} text='9'/>
+        <Button name='*' func={handleClick} text='&times;'/>
+        <Button name='4' func={handleClick} text='4'/>
+        <Button name='5' func={handleClick} text='5'/>
+        <Button name='6' func={handleClick} text='6'/>
+        <Button name='-' func={handleClick} text='&ndash;'/>
+        <Button name='1' func={handleClick} text='1'/>
+        <Button name='2' func={handleClick} text='2'/>
+        <Button name='3' func={handleClick} text='3'/>
+        <Button name='+' func={handleClick} text='+'/>
+        <Button name='0' func={handleClick} text='0'/>
+        <Button name='.' func={handleClick} text='.'/>
+        
+        <Button func={calculate} text='=' className={true} id="result"/>
       </div>
     </div>
   )
